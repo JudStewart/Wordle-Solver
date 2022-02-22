@@ -120,7 +120,7 @@ namespace WordleSolver
 				}
 			}
 
-			MessageBox.Show("Count: " + filteredList.Count());
+			//MessageBox.Show("Count: " + filteredList.Count());
 
 			string pattern = "";
 			for (int l = 0; l < 5; l++)
@@ -141,7 +141,7 @@ namespace WordleSolver
 				pattern += thisSlot;
 			}
 
-			MessageBox.Show("Final regex pattern is " + pattern, "DEBUG");
+			//MessageBox.Show("Final regex pattern is " + pattern, "DEBUG");
 
 			Regex rg = new Regex(pattern);
 			var solutions = filteredList.Where<string>(word => rg.IsMatch(word));
